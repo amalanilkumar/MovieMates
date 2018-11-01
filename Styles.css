@@ -1,0 +1,9 @@
+body {
+    background-color: hsl(0, 0%, 100%);
+}
+h1 {
+    color: rgb(45, 45, 59);
+}
+p {
+    color: red;
+}
