@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+    <title>Dashboard | Screen</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- animation CSS -->
+    <link href="../css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="../css/default.css" id="theme" rel="stylesheet">
+
+</head>
+
+<body class="fix-header">
+    <!-- ============================================================== -->
+    <!-- Preloader -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <div id="wrapper" ng-app="mainApp" ng-controller="MainCtrl as ctrl">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
+                </div>
+                <ul class="nav" id="side-menu">
+                    <li style="padding: 70px 0 0;">
+                        <a href="index.html" class="waves-effect">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="screens.html" class="waves-effect">Screens</a>
+                    </li>
+                    <li>
+                        <a href="basic-table.html" class="waves-effect">Basic Table</a>
+                    </li>
+                    <li>
+                        <a href="fontawesome.html" class="waves-effect">Icons</a>
+                    </li>
+                    <li>
+                        <a href="404.html" class="waves-effect">Error 404</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Dashboard</h4>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <ol class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li class="active">Screens</li>
+                        </ol>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <!-- ============================================================== -->
+                <!-- Different data widgets -->
+                <!-- ============================================================== -->
+                <!-- .row -->
+                <div class="row">
+                    <div>
+                    </div>
+                </div>
+                <!--/.row -->
+                <!-- ============================================================== -->
+                <!-- table -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="row justify-content-around">
+                                <button type="button" data-toggle="modal" data-target="#newScreen" data-whatever="@mdo" class="btn btn-outline-secondary float-left">Add new screen</button>
+
+                                <button type="button" data-toggle="modal" data-target="#removeScreen" data-whatever="@mdo" class="btn btn-outline-secondary float-">Remove a screen</button>
+
+                                <button type="button" data-toggle="modal" data-target="#newMovie" data-whatever="@mdo" class="btn btn-outline-secondary float-right">Add new movie</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Screen 1</h3>
+                            <div class="table-responsive">
+                                <table class="table table-shopping">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th></th>
+                                            <th>MOVIE</th>
+                                            <th>DATE</th>
+                                            <th>TIME</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="text-right img-container">
+
+                                                <img src="https://www.joblo.com/assets/images/oldsite/posters/images/full/logan-poster-3.jpg" alt="">
+
+                                            </td>
+                                            <td class="td-name">
+                                                Logan
+                                                <br><small>English 2D</small>
+                                            </td>
+                                            <td class="txt-oflo">April 18, 2017</td>
+                                            <td>
+                                                <div class="schedule">
+                                                    <span class="label time time-strike">09:45 AM</span>
+                                                    <span class="label time time-strike">12:00 PM</span>
+                                                    <span class="label time">09:00 PM</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary">Remove</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>
+                                                <div class="img-container">
+                                                    <img src="http://onlookersmedia.in/wp-content/uploads/2015/12/Charlie-Malayalam-Movie-Poster-Stills-Dulquer-Salmaan-3.jpg" alt="">
+                                                </div>
+                                            </td>
+                                            <td class="td-name">
+                                                Charile
+                                                <br><small>Malayalam 2D</small>
+                                            </td>
+                                            <td class="txt-oflo">April 19, 2017</td>
+                                            <td>
+                                                <div class="schedule">
+                                                    <span class="label time">03:00 PM</span>
+                                                    <span class="label time">06:00 PM</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary">Remove</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="user-btm-box">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 text-center">
+                                        <h2 class="text-purple">No. of seats</h2>
+                                        <h3>112</h3>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-center">
+                                        <h2 class="text-blue">Show times</h2>
+                                        <div class="schedule" style="width:auto">
+                                            <span class="label time">09:45 AM</span>
+                                            <span class="label time">12:00 PM</span>
+                                            <span class="label time">03:00 PM</span>
+                                            <span class="label time">06:00 PM</span>
+                                            <span class="label time">09:00 PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Screen 2</h3>
+                            <div class="table-responsive">
+                                <table class="table table-shopping">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th></th>
+                                            <th>MOVIE</th>
+                                            <th>DATE</th>
+                                            <th>TIME</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="text-right img-container">
+
+                                                <img src="https://www.joblo.com/assets/images/oldsite/posters/images/full/logan-poster-3.jpg" alt="">
+
+                                            </td>
+                                            <td class="td-name">
+                                                Logan
+                                                <br><small>English 2D</small>
+                                            </td>
+                                            <td class="txt-oflo">April 18, 2017</td>
+                                            <td>
+                                                <div class="schedule">
+                                                    <span class="label time time-strike">09:45 AM</span>
+                                                    <span class="label time time-strike">12:00 PM</span>
+                                                    <span class="label time">09:00 PM</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>
+                                                <div class="img-container">
+                                                    <img src="http://onlookersmedia.in/wp-content/uploads/2015/12/Charlie-Malayalam-Movie-Poster-Stills-Dulquer-Salmaan-3.jpg" alt="">
+                                                </div>
+                                            </td>
+                                            <td class="td-name">
+                                                Charile
+                                                <br><small>Malayalam 2D</small>
+                                            </td>
+                                            <td class="txt-oflo">April 19, 2017</td>
+                                            <td>
+                                                <div class="schedule">
+                                                    <span class="label time">03:00 PM</span>
+                                                    <span class="label time">06:00 PM</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="user-btm-box">
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <h2 class="text-purple">No. of seats</h2>
+                                    <h3>112</h3>
+                                </div>
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <h2 class="text-blue">Show times</h2>
+                                    <div class="schedule" style="width:auto">
+                                        <span class="label time">09:45 AM</span>
+                                        <span class="label time">12:00 PM</span>
+                                        <span class="label time">03:00 PM</span>
+                                        <span class="label time">06:00 PM</span>
+                                        <span class="label time">09:00 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Screen 1</h3>>
+                            <div class="user-btm-box">
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <h2 class="text-purple">No. of seats</h2>
+                                    <h3>112</h3>
+                                </div>
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <h2 class="text-blue">Show times</h2>
+                                    <div class="schedule" style="width:auto">
+                                        <span class="label time">09:45 AM</span>
+                                        <span class="label time">12:00 PM</span>
+                                        <span class="label time">03:00 PM</span>
+                                        <span class="label time">06:00 PM</span>
+                                        <span class="label time">09:00 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by wrappixel.com </footer>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page Content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- Mode templates  -->
+    <div class="modal fade" id="newScreen" tabindex="-1" role="dialog" aria-labelledby="newScreen" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Screen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Screen Name:</label>
+                            <input type="text" class="form-control" id="screen-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">No of seats</label>
+                            <input type="number" class="form-control" id="screen-seat">
+                        </div>
+
+                        <label class="col-form-label">Show times</label><br>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="time10" name="showtime">
+                            <label class="custom-control-label" for="time10">10: 00 AM</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="time11" name="showtime">
+                            <label class="custom-control-label" for="time11">11: 00 AM</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="time12" name="showtime">
+                            <label class="custom-control-label" for="time12">12: 00 PM</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="time13" name="showtime">
+                            <label class="custom-control-label" for="time13">01: 15 PM</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="time03" name="showtime">
+                            <label class="custom-control-label" for="time03">03: 00 PM</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="time06" name="showtime">
+                            <label class="custom-control-label" for="time06">06: 00 PM</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="time09" name="showtime">
+                            <label class="custom-control-label" for="time09">09: 00 PM</label>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="removeScreen" tabindex="-1" role="dialog" aria-labelledby="removeScreen" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Remove Screen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="screenChosse" class="col-form-label">Screen Name:</label>
+                            <select class="custom-select" id="screenChose">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Remove Screen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="newMovie" tabindex="-1" role="dialog" aria-labelledby="newMovie" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="screenNew" class="col-form-label">Select Screen:</label>
+                            <select class="custom-select" id="screenNew">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Choose Movie:</label>
+                            <input type="text" id="autocomplete" class="form-control typeahead border-primary" placeholder="Search Movie..." autocomplete="off">
+                        </div>
+                        <label class="col-form-label">Show times:</label><br>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="new10" name="shownew">
+                            <label class="custom-control-label" for="new10">10: 00 AM</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="new11" name="shownew">
+                            <label class="custom-control-label" for="new11">11: 00 AM</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="new12" name="shownew">
+                            <label class="custom-control-label" for="new12">12: 00 PM</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="new13" name="shownew">
+                            <label class="custom-control-label" for="new13">01: 15 PM</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="new03" name="shownew">
+                            <label class="custom-control-label" for="new03">03: 00 PM</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="new06" name="shownew">
+                            <label class="custom-control-label" for="new06">06: 00 PM</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="new09" name="shownew">
+                            <label class="custom-control-label" for="new09">09: 00 PM</label>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="../js/jquery.slimscroll.js"></script>
+    <!--Counter js -->
+    <script src="../js/jquery-ui.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/custom.js"></script>
+    <script>
+        var data = ["item1", "item2", "item3", "item4", "alpha", "beta", "cappa", "sigma"];
+
+        $(function() {
+
+            $("#autocomplete").autocomplete({
+                    minLength: 3,
+                    source: function(request, response) {
+                        $.ajax({
+                            url: "https://api.themoviedb.org/3/search/movie?api_key=1d4560ba7db5d84ecc486ecbc4a62294&page=1",
+                            type: "GET",
+                            data: {
+                                query: request.term
+                            },
+                            success: function(data) {
+                                response(data.results.slice(0, 5));
+                            }
+                        });
+                    },
+                    focus: function(event, ui) {
+                        $("#autocomplete").val(ui.item.title);
+                        return false;
+                    },
+                    select: function(event, ui) {
+                        $("#autocomplete").val(ui.item.title);
+
+                        return false;
+                    }
+                })
+                .autocomplete("instance")._renderItem = function(ul, item) {
+                    return $("<li class='search-suggest'>")
+                        .append("<div><img class='thumb' src='http://image.tmdb.org/t/p/w185//" + item.poster_path + "' width=40 height=60/><div class='ss-info'><h5>" +
+                            item.title + "</h5>" + item.release_date + "</div></div>")
+                        .appendTo(ul);
+                }
+        });
+    </script>
+    <!-- "/SIS6LON2mE7BzdwGAaTSacX1GW.jpg" -->
+    <!-- http://image.tmdb.org/t/p/w185//SIS6LON2mE7BzdwGAaTSacX1GW.jpg -->
+</body>
+
+</html>
