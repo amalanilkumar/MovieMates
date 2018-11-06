@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compa tible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -497,6 +497,7 @@
                                 query: request.term
                             },
                             success: function(data) {
+                                // console.log(data.results.slice(0, 5))
                                 response(data.results.slice(0, 5));
                             }
                         });
@@ -508,6 +509,14 @@
                     select: function(event, ui) {
                         $("#autocomplete").val(ui.item.title);
 
+                        $.ajax({
+                            url: "https://api.themoviedb.org/3/movie/" + ui.item.id + "?api_key=1d4560ba7db5d84ecc486ecbc4a62294",
+                            type: "GET",
+
+                            success: function(data) {
+                                console.log(data)
+                            }
+                        });
                         return false;
                     }
                 })
