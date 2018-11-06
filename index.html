@@ -57,34 +57,25 @@
     </header>
 
     <main role="main">
+
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block" src="./img/kkk_b.jpg" alt="First slide">
-
-
-                    <a href="#ds">
-                        <div class="carousel-caption d-none d-md-block text-left">
-                            <h3>Well done</h3>
-                            <p>...</p>
-                        </div>
-                </div>
-                </a>
-                <div class="carousel-item">
-                    <img src="./img/rsn-b.jpg" alt="...">
-
+                    <img src="http://image.tmdb.org/t/p/original/dcOIEJviKnBmUHghL6xNJe9cPWo.jpg" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block " src="./img/96_b.jpg" alt="Second slide">
+                    <img src="http://image.tmdb.org/t/p/original/kMPVWn0pt8aJE6hORTI2x4tYAif.jpg" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block " src="./img/venom-b.jpg" alt="Third slide">
+                    <img src="http://image.tmdb.org/t/p/original/29ll78JPYFlBgYNBtsN3VnC7L4u.jpg" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="http://image.tmdb.org/t/p/original/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -96,15 +87,20 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
         <div class="album py-5 bg-light" ng-app="homeApp" ng-controller="homeCtrl">
             <div class="container">
 
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button type="button" class="btn btn-outline-primary">Search movies</button>
+                    </div>
+                    <input type="text" ng-model="searchMovies " name="searchMovies" class="form-control" aria-label="Text input with segmented dropdown button">
+                </div>
+                <br/>
                 <div class="row">
-
-                    <div class="col-md-3" ng-repeat="movie in movies">
+                    <div class="col-md-3" ng-repeat="movie in moviesF =( movies | filter : searchMovies) ">
                         <div class="card movie-card mb-4 box-shadow">
-                            <img class="card-img-" alt="Thumbnail [100%x225]" src="http://image.tmdb.org/t/p/w342//{{movie.poster_path}}" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                            <img class="card-img-top" alt="Thumbnail [100%x225]" src="http://image.tmdb.org/t/p/w342//{{movie.poster_path}}" data-holder-rendered="true">
                             <div class="card-body">
                                 <h5 class="card-title">{{movie.title}}</h5>
                                 <p class="card-text">{{movie.overview}}</p>
@@ -159,6 +155,7 @@
                 overview: "The life of Kayamkulam Kochunni, a famed highwayman who robbed from the rich and gave to the poor during the British Raj in the early 19th century Central Travancore.",
                 popularity: 2.477,
                 poster_path: "/1Dd9oh98Vb0ufs7RqO04TCbLM1F.jpg",
+                backdrop_path: "/dcOIEJviKnBmUHghL6xNJe9cPWo.jpg",
                 release_date: "2018-10-11",
                 title: "Kayamkulam Kochunni",
                 runtime: 122
@@ -169,6 +166,7 @@
                 overview: "A serial killer is murdering school girls, and a newbie cop has to track him down before the victim count increases.",
                 popularity: 22.632,
                 poster_path: "/mruUFlrVKiL994y3vvQBT8R2Vnf.jpg",
+                backdrop_path: "/kMPVWn0pt8aJE6hORTI2x4tYAif.jpg",
                 release_date: "2018-10-05",
                 title: "Ratsasan",
                 runtime: 170
@@ -180,6 +178,7 @@
                 overview: "Ram is a photographer and nature lover who travels all around India capturing moments. On a chance visit to his hometown Tanjavur, he goes into his school and begins to walk down memory lane to 1994 when he was a student harboring feelings for his classmate Janu.",
                 popularity: 3.512,
                 poster_path: "/nrVloCa2hCFOztRF1DZU2jnWIiQ.jpg",
+                backdrop_path: "/29ll78JPYFlBgYNBtsN3VnC7L4u.jpg",
                 release_date: "2018-10-04",
                 title: "96",
                 runtime: 159
@@ -190,6 +189,7 @@
                 overview: "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego 'Venom' to save his life.",
                 popularity: 299.369,
                 poster_path: "/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+                backdrop_path: "/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg",
                 release_date: "2018-10-03",
                 title: "Venom",
                 runtime: 112,
